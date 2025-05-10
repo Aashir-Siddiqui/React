@@ -1,3 +1,4 @@
+// import React from 'react'
 import './App.css'
 import NetflixCard from './Components/NetflixCard'
 
