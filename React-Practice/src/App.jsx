@@ -1,5 +1,5 @@
-// import React from 'react'
-import './App.css'
+import React from 'react'
+import './Components/Netflix.module.css'
 import NetflixCard from './Components/NetflixCard'
 
 function App() {

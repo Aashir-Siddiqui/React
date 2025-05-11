@@ -4,12 +4,6 @@ body {
   font-family: Arial, sans-serif;
 }
 
-#root {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .cards-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -44,24 +38,18 @@ body {
   padding: 18px;
 }
 
-.card-title {
+/* .card-title {
   font-size: 1.6rem;
   margin: 0 0 12px;
   color: #fff;
   font-weight: 600;
-}
+} */
 
-.card-rating {
-  color: #fff;
-  font-size: 1.2rem;
-  margin: 0 0 12px;
-}
-
-.rate {
+/* .rate {
   color: #fff;
   font-size: 1rem;
   margin: 0 0 12px;
-}
+} */
 
 .super {
   background-color: #e50914;
