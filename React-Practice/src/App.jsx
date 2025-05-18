@@ -1,13 +1,12 @@
-import React from 'react'
-import './Components/Netflix.module.css'
-import NetflixCard from './Components/NetflixCard'
+import './Components/Netflix.module.css';
+import NetflixCard from './Components/NetflixCard';
 
 function App() {
   return (
     <>
-    <NetflixCard/>
+      <NetflixCard/>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
