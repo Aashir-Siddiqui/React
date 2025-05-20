@@ -40,3 +40,10 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+
+/* DericedState CSS */
+
+h1{
+    font: 24px;
+}
