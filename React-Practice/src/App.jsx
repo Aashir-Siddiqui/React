@@ -1,10 +1,9 @@
-import './Components/Netflix.module.css';
-import NetflixCard from './Components/NetflixCard';
+import Todo from './Projects/Todo/Todo';
 
 function App() {
   return (
     <>
-      <NetflixCard/>
+      <Todo/>
     </>
   );
 }
