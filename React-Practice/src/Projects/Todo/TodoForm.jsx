@@ -1,7 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
+import Swal from 'sweetalert2';
 
-export default function TodoForm({ onAddTodo }) {
-    const [inputValue, setInputValue] = useState("");
+export default function TodoForm({ onAddTodo, editText, editMode, onEditTodo }) {
+    const [inputValue, setInputValue] = useState(editText || "");
+    const inputRef = useRef(null);
+
+    const showError = (title, text) => Swal.fire({ icon: "error", title, text });
+    const showSuccess = (title, text) => Swal.fire({ icon: "success", title, text });
+
+    useEffect(() => {
+        setInputValue(editText || "");
+        if (editMode) {
+            inputRef.current.focus();
+        }
+    }, [editText, editMode]);
 
     const handleChange = (value) => {
         setInputValue(value);
@@ -10,8 +22,21 @@ export default function TodoForm({ onAddTodo }) {
     const handleFormSubmit = (event) => {
         event.preventDefault();
         if (inputValue.trim()) {
-            onAddTodo(inputValue);
+            if (editMode) {
+                onEditTodo(inputValue);
+                showSuccess("Todo Edited!", "Your todo has been updated successfully.");
+            } else {
+                onAddTodo(inputValue);
+                showSuccess("Todo Added!", "Your todo has been added successfully.");
+            }
             setInputValue("");
+        } else {
+            Swal.fire({
+                title: "Empty Input!",
+                icon: "warning",
+                text: "Please enter a todo before submitting.",
+                timer: 3000
+            })
         }
     };
 
@@ -23,13 +48,14 @@ export default function TodoForm({ onAddTodo }) {
                 autoComplete="off"
                 value={inputValue}
                 onChange={(event) => handleChange(event.target.value)}
-                className="flex-1 p-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="flex-1 p-2 border border-gray-300 dark:border-gray-600 rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 placeholder-gray-400 dark:placeholder-gray-500"
+                ref={inputRef}
             />
             <button
                 type="submit"
-                className="bg-blue-500 text-white px-4 py-2 rounded-r-md hover:bg-blue-600 transition"
+                className="bg-blue-500 dark:bg-blue-600 text-white px-4 py-2 rounded-r-md hover:bg-blue-600 dark:hover:bg-blue-700 transition"
             >
-                Add Todo
+                {editMode ? "Update Todo" : "Add Todo"}
             </button>
         </form>
     );
