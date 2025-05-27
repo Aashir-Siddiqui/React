@@ -151,7 +151,7 @@ export default function Todo() {
                 </ul>
                 <button
                     onClick={clearTodo}
-                    className="bg-red-600 dark:bg-red-700 text-white px-4 py-2 rounded-md w-full hover:bg-red-700 dark:hover:bg-red-800 transition"
+                    className="bg-red-600 dark:bg-violet-700 text-white px-4 py-2 rounded-md w-full hover:bg-red-700 dark:hover:bg-violet-800 transition"
                 >
                     Clear All
                 </button>
