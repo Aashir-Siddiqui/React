@@ -1,9 +1,9 @@
-import Todo from './Projects/Todo/Todo';
-
+import AdvanceRegistrationForm from './Components/hooks/useState/AdvanceRegistrationForm';
 function App() {
   return (
     <>
-      <Todo/>
+      {/* <Todo/> */}
+      <AdvanceRegistrationForm/>
     </>
   );
 }
