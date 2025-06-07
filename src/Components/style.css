@@ -1,0 +1,49 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+}
+
+.g-div {
+    width: 600px;
+    height: 400px;
+    background-color: lightgoldenrodyellow;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.p-div {
+    width: 400px;
+    height: 250px;
+    background-color: cornflowerblue;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.c-div {
+    width: 200px;
+    height: 100px;
+    background-color: lightgreen;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* DericedState CSS */
+
+h1{
+    font: 24px;
+}
