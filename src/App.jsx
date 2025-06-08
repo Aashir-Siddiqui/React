@@ -1,11 +1,11 @@
 import './App.css'
-import Index from './hooks/UseId/Index'
+import {Parent} from './Components/PropDrilling.jsx'
 
 function App() {
 
   return (
     <>
-    <Index/>
+    <Parent/>
     </>
   )
 }
