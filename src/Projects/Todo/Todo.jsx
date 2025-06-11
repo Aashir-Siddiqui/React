@@ -4,6 +4,7 @@ import TodoList from './TodoList';
 import { getLocalStorageTodo, setLocalStorageTodo } from './TodoLocalStorage';
 import Swal from 'sweetalert2';
 import { FaSun, FaMoon } from 'react-icons/fa';
+import { SiTodoist } from "react-icons/si";
 
 export default function Todo() {
     const [tasks, setTasks] = useState(() => getLocalStorageTodo());
@@ -122,10 +123,10 @@ export default function Todo() {
         <section className="min-h-screen bg-gray-100 dark:bg-gray-900 flex items-center justify-center p-4">
             <div className="w-full max-w-md bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
                 <div className="flex justify-between items-center mb-6">
-                    <h1 className="text-2xl font-bold text-center text-gray-800 dark:text-gray-200">Todo App</h1>
+                    <h1 className="text-2xl font-bold text-center text-gray-800 dark:text-gray-200 flex items-center gap-1.5"> <span className=' dark:text-violet-700'> <SiTodoist /> </span>Todo App</h1>
                     <button
                         onClick={toggleTheme}
-                        className="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-gray-100 transition"
+                        className="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-gray-100 transition cursor-pointer"
                     >
                         {isDarkMode ? <FaSun size={20} /> : <FaMoon size={20} />}
                     </button>
@@ -151,7 +152,7 @@ export default function Todo() {
                 </ul>
                 <button
                     onClick={clearTodo}
-                    className="bg-red-600 dark:bg-violet-700 text-white px-4 py-2 rounded-md w-full hover:bg-red-700 dark:hover:bg-violet-800 transition"
+                    className="bg-red-600 dark:bg-violet-700 text-white cursor-pointer px-4 py-2 rounded-md w-full hover:bg-red-700 dark:hover:bg-violet-800 transition"
                 >
                     Clear All
                 </button>
