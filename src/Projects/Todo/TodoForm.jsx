@@ -53,7 +53,7 @@ export default function TodoForm({ onAddTodo, editText, editMode, onEditTodo }) 
             />
             <button
                 type="submit"
-                className="bg-blue-500 dark:bg-violet-600 text-white px-4 py-2 rounded-r-md hover:bg-blue-600 dark:hover:bg-violet-700 transition"
+                className="bg-blue-500 dark:bg-violet-600 text-white text-sm px-4 py-2 rounded-r-md hover:bg-blue-600 dark:hover:bg-violet-700 transition cursor-pointer"
             >
                 {editMode ? "Update Todo" : "Add Todo"}
             </button>
