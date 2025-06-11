@@ -1,12 +1,15 @@
-import './App.css'
-import {Parent} from './Components/PropDrilling.jsx'
+// import './App.css'
+import { BioProvider } from './hooks/contextApi/index.jsx'
+import { Home } from './hooks/contextApi/Home.jsx'
+import { About } from './hooks/contextApi/About.jsx'
 
 function App() {
 
   return (
-    <>
-    <Parent/>
-    </>
+    <BioProvider>
+      <Home />
+      <About/>
+    </BioProvider>
   )
 }
 
