@@ -1,12 +1,10 @@
-// import './App.css'
-
-import Reduce from "./hooks/useReducer"
+import ReactMemo from "./hooks/memo/ReactMemo"
 
 function App() {
 
   return (
     <>
-      <Reduce />
+      <ReactMemo />
     </>
   )
 }
