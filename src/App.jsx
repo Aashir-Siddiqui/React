@@ -1,12 +1,11 @@
-import ReactMemo from "./hooks/memo/ReactMemo"
-import UseCallback from "./hooks/memo/UseCallback"
-import UseMemoComponent from "./hooks/memo/Usememo"
+import Footer from "./Projects/DynamicContactSection/Footer"
+
 
 function App() {
 
   return (
     <>
-      <UseCallback />
+      <Footer />
     </>
   )
 }
