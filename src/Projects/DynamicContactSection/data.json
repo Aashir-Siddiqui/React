@@ -1,0 +1,17 @@
+[
+    {
+        "icon": "MdLocationOn",
+        "tittle": "Find Us",
+        "detail": "Karachi Pakistan"
+    },
+    {
+        "icon": "IoCall",
+        "tittle": "Call Us",
+        "detail": "03123456789"
+    },
+    {
+        "icon": "IoIosMail",
+        "tittle": "Mail Us",
+        "detail": "aashir@gmail.com"
+    }
+]
