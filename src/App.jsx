@@ -1,13 +1,11 @@
-import Footer from "./Projects/DynamicContactSection/Footer"
-
+import Index from "./hooks/contextApi/themeBtn";
 
 function App() {
-
   return (
     <>
-      <Footer />
+      <Index />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
