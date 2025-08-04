@@ -1,9 +1,9 @@
-import Index from "./hooks/contextApi/themeBtn";
+import Todo from "./hooks/contextApi/todoContext/Todo";
 
 function App() {
   return (
     <>
-      <Index />
+      <Todo />
     </>
   );
 }
